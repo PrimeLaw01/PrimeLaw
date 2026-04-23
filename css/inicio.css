@@ -66,6 +66,44 @@ h3 {
     font-size: 20px;
 }
 
+/* CONTENEDOR DE REGRESAR */
+.contenedor-regresar {
+    padding: 20px 3% 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.enlace-regresar {
+    text-decoration: none;
+    color: #003f63;
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    padding: 8px 15px;
+    border-radius: 8px;
+}
+
+.enlace-regresar i {
+    font-size: 20px;
+}
+
+.enlace-regresar:hover {
+    color: #0099e6;
+    background-color: rgba(0, 153, 230, 0.05);
+    transform: translateX(-5px); 
+}
+
+@media (max-width: 768px) {
+    .contenedor-regresar {
+        padding: 15px 5% 0;
+    }
+}
+
+
 /* SECCIÓN HERO */
 .contenido-hero {
     text-align: center;
