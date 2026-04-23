@@ -1,0 +1,86 @@
+
+.seccion-ruta-legal {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.contenedor-busqueda {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+
+main {
+    padding-top: 0;
+}
+
+.contenedor-cards-areas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 20px 5% 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tarjeta-area-vertical {
+    background: #fff;
+    border-radius: 20px; 
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.tarjeta-area-vertical:hover {
+    transform: translateY(-5px);
+}
+
+.imagen-tarjeta-v {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.contenido-tarjeta-v {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.contenido-tarjeta-v h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #000;
+}
+
+.contenido-tarjeta-v p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.enlace-incluye {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+}
+
+.enlace-incluye:hover {
+    color: #006699;
+}
