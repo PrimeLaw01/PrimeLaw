@@ -351,46 +351,57 @@ h3 {
 }
 
 .barra-busqueda {
-    background-color: #000;
-    width: 100%;
-    max-width: 900px;
     display: flex;
     align-items: center;
-    padding: 8px 15px;
+    background-color: #000;
     border-radius: 50px;
-    gap: 15px;
+    padding: 8px 10px;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1001;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.entrada-busqueda { 
-    flex: 1; 
-    background: transparent; 
-    border: none; 
-    color: white; 
-    font-size: 16px; 
-    outline: none; 
+.entrada-busqueda {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    outline: none;
+    font-family: 'Lora', serif;
 }
 
 .entrada-busqueda::placeholder { 
     color: #c1c1c1; 
 }
 
-.texto-opciones { 
-    color: white; 
-    font-size: 14px; 
-    cursor: pointer; 
-    white-space: nowrap; 
+.texto-opciones {
+    color: #fff;
+    font-size: 14px;
+    margin: 0 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color 0.3s;
+    font-family: 'Lora', serif;
 }
 
-.boton-buscar { 
-    background-color: #fff; 
-    color: #000; 
-    border: none; 
-    padding: 8px 25px; 
-    border-radius: 20px; 
-    font-weight: bold; 
-    cursor: pointer; 
-    transition: background 0.3s; 
+
+.boton-buscar {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Cinzel', serif;
 }
+
 
 /* DETALLES DE ÁREA */
 .contenedor-detalle-area {
@@ -1153,11 +1164,11 @@ h3 {
 
 .contenedor-redes-flotantes {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-    max-width: 1200px;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 15px;
+    max-width: 1250px;
     margin: 0 auto;
-    padding: 40px 5%;
+    padding: 40px 2%;
     justify-items: center;
     perspective: 1000px;
 }
@@ -1167,10 +1178,10 @@ h3 {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 20px;
-    padding: 30px;
+    padding: 20px 15px;
     width: 100%;
-    max-width: 280px;
-    min-height: 250px;
+    max-width: 210px;
+    min-height: 220px;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     cursor: pointer;
     text-decoration: none;
@@ -1178,6 +1189,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .tarjeta-red i {
@@ -1202,11 +1214,21 @@ h3 {
 }
 
 .tarjeta-red:hover {
+    transform: translateY(-18px) rotateX(2deg) !important;
+    background: #ffffff;
+    box-shadow: 0 20px 40px rgba(0, 63, 99, 0.15);
+    border-color: #0081c2;
+    z-index: 10;
+}
+
+
+.tarjeta-red.revelar:hover {
     transform: translateY(-20px) rotateX(10deg);
     background: #ffffff;
     box-shadow: 0 20px 40px rgba(0, 63, 99, 0.15);
     border-color: #0081c2;
 }
+
 
 .tarjeta-red.whatsapp:hover {
     border-color: #25D366;
@@ -1282,4 +1304,54 @@ h3 {
     .contenedor-redes-flotantes { grid-template-columns: 1fr; }
     .contenedor-footer { grid-template-columns: 1fr; text-align: center; }
     .columna-footer h4 { margin: 20px auto; }
+}
+
+
+
+.contenedor-busqueda-principal {
+    position: relative;
+    width: 100%;
+    max-width: 850px;
+    margin: 20px auto;
+}
+
+.sugerencias-dropdown {
+    position: absolute;
+    top: 90%;
+    left: 20px;
+    right: 20px;
+    background: white;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    display: none;
+    z-index: 999;
+    padding-top: 20px;
+    border: 1px solid #eee;
+}
+
+.item-sugerencia {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-bottom: 1px solid #7f7f7f;
+}
+
+.item-sugerencia:hover {
+    background: #f8f9fa;
+}
+
+.item-sugerencia img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.item-sugerencia span {
+    font-family: 'Lora', serif;
+    color: #003f63;
+    font-weight: 600;
 }

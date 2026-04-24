@@ -64,13 +64,18 @@
             <h2 class="titulo-paso">El primer paso hacia su tranquilidad es entender su caso</h2>
             <p class="subtitulo-ruta">Identifiquemos la mejor ruta legal para su conflicto con la siguiente información:</p>
 
-            <div class="contenedor-busqueda">
+            <div class="contenedor-busqueda-principal">
                 <div class="barra-busqueda">
-                    <i class="fa-solid fa-magnifying-glass icono-lupa" style="color: white;"></i>
-                    <input type="text" placeholder="Explore conceptos legales (Ej. Derecho Civil)" class="entrada-busqueda">
-                    <span class="texto-opciones">Ver opciones</span>
-                    <button class="boton-buscar">Buscar</button>
+                    <i class="fa-solid fa-magnifying-glass" style="color: white; margin-left: 15px;"></i>
+                    
+                    <input type="text" id="busqueda-inicio" onkeyup="mostrarSugerencias()" placeholder="Explore conceptos legales..." class="entrada-busqueda" autocomplete="off">
+                    
+                    <span class="texto-opciones" onclick="toggleOpciones()">Ver opciones</span>
+                    
+                    <button class="boton-buscar" onclick="buscarDesdeInicio()">Buscar</button>
                 </div>
+                
+                <div id="lista-sugerencias" class="sugerencias-dropdown"></div>
             </div>
 
             <div class="contenedor-detalle-area revelar-izq">
@@ -180,6 +185,13 @@
                     <h4>Facebook</h4>
                     <p>Eventos legales, noticias de la firma y nuestra comunidad jurídica.</p>
                 </a>
+                
+                <a href="#" class="tarjeta-red revelar">
+                    <i class="fa-brands fa-tiktok"></i>
+                    <h4>TikTok</h4>
+                    <p>Cápsulas legales rápidas y consejos prácticos para su día a día.</p>
+                </a>
+                
 
             </div>
 
